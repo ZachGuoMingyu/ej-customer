@@ -1,15 +1,31 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import productsModule from './modules/products';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-export * from './modules/mutation-types';
+Vue.use(Vuex)
 
-Vue.use(Vuex);
+import user from './modules/user'
+import category from './modules/category'
+import product from './modules/product'
+import address from './modules/address'
+import order from './modules/order'
+import shopcar from './modules/shopcar'
+import comment from './modules/comment'
+import recharge from './modules/recharge'
+import register from './modules/register'
+import realname from './modules/realname'
+
 
 export default new Vuex.Store({
-  strict: process.env.NODE_ENV !== 'production',
-  modules: {
-    products: productsModule,
-  },
-  state: {},
-});
+  modules:{
+    user,
+    category,
+    product,
+    address,
+    order,
+    shopcar,
+    comment,
+    recharge,
+    register,
+    realname
+  }
+})
